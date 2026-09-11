@@ -3,86 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rei dos Reparos</title>
+    <title>Rei dos Reparos - Loja de Materiais e Ferramentas</title>
     
-    <!-- AQUI FICA O ESTILO (CSS) QUE DÁ COR E BELEZA AO SITE -->
     <style>
-        /* Estilo geral da página */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
+            background-color: #f4f7fc; /* Fundo leve para destacar os cartões */
             margin: 0;
             padding: 0;
-            color: #333;
+            color: #1a202c;
         }
 
-        /* Cabeçalho azul no topo */
+        /* TOPO AZUL COM DETALHE AMARELO */
         header {
-            background-color: #0d6efd;
-            color: white;
-            padding: 40px 20px;
+            background-color: #0046ad; /* Azul principal */
+            color: #ffffff; /* Texto branco */
+            padding: 40px 20px 60px 20px;
             text-align: center;
+            border-bottom: 6px solid #ffcc00; /* Linha amarela de destaque */
         }
 
         header h1 {
             margin: 0;
             font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         header p {
             font-size: 1.2rem;
-            opacity: 0.9;
+            margin-top: 10px;
+            color: #ffcc00; /* Detalhe amarelo no texto secundário */
+            font-weight: 600;
         }
 
-        /* Caixa do conteúdo principal */
-        .conteudo {
-            max-width: 600px;
-            margin: 30px auto;
-            background: white;
-            padding: 30px;
+        /* CARTÃO PRINCIPAL BRANCO */
+        .container {
+            max-width: 720px;
+            margin: -30px auto 40px auto;
+            background: #ffffff; /* Fundo branco */
+            padding: 35px;
             border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        h2 {
+            text-align: center;
+            color: #0046ad; /* Titulo azul */
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        /* GRADE DOS PRODUTOS */
+        .categoria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .categoria-card {
+            background-color: #ffffff;
+            border: 2px solid #e2e8f0;
+            border-top: 4px solid #0046ad; /* Borda superior em azul */
+            border-radius: 8px;
+            padding: 18px;
+            text-align: left;
+        }
+
+        .categoria-card h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            color: #0046ad; /* Nome da categoria azul */
+            border-bottom: 2px solid #ffcc00; /* Sublinhado amarelo */
+            padding-bottom: 6px;
+            display: inline-block;
+        }
+
+        .categoria-card ul {
+            padding-left: 18px;
+            margin: 10px 0 0 0;
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        /* BLOCO DE INFORMAÇÕES DE ATENDIMENTO */
+        .info-loja {
+            background-color: #0046ad; /* Fundo azul */
+            color: #ffffff; /* Texto branco */
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 8px solid #ffcc00; /* Borda amarela chamativa */
+            margin-bottom: 30px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .info-loja p {
+            margin: 6px 0;
+        }
+
+        .info-loja strong {
+            color: #ffcc00; /* Destaques em amarelo */
+        }
+
+        /* BOTÃO DO WHATSAPP (AMARELO DESTAQUE) */
+        .area-botao {
             text-align: center;
         }
 
-        /* Estilo do botão do WhatsApp */
         .btn-whatsapp {
             display: inline-block;
-            background-color: #25d366;
-            color: white;
+            background-color: #ffcc00; /* Fundo amarelo */
+            color: #0046ad; /* Texto azul para alto contraste */
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             font-weight: bold;
-            padding: 15px 30px;
+            padding: 16px 32px;
             border-radius: 50px;
-            margin-top: 20px;
-            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
         }
 
-        /* Efeito de passar o mouse no botão */
         .btn-whatsapp:hover {
-            background-color: #1ebc57;
-            transform: scale(1.05);
+            background-color: #e6b800; /* Amarelo um pouco mais escuro no clique */
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
 
-    <!-- CABEÇALHO DO SITE -->
+    <!-- CABEÇALHO AZUL E AMARELO -->
     <header>
-        <h1>Rei dos Reparos</h1>
-        <p>Manutenção, Reformas e Consertos Residenciais</p>
+        <h1>🛒 Rei dos Reparos</h1>
+        <p>Hidráulica, Elétrica e Ferramentas</p>
     </header>
 
-    <!-- CORPO DO SITE -->
-    <main class="conteudo">
-        <h2>Precisa de ajuda na sua casa?</h2>
-        <p>Atendimento rápido, profissional e com preço justo. Faça seu orçamento sem compromisso!</p>
+    <!-- CONTEÚDO PRINCIPAL (FUNDO BRANCO) -->
+    <main class="container">
+        <h2>O que você encontra na nossa loja</h2>
         
-        <!-- Altere o número abaixo para o seu WhatsApp -->
-        <a href="https://wa.me/5500000000000" class="btn-whatsapp" target="_blank">
-            💬 Chamar no WhatsApp
-        </a>
+        <!-- CATÁLOGOS DE PRODUTOS -->
+        <div class="categoria-grid">
+            
+            <div class="categoria-card">
+                <h3>🚰 Reparos Hidráulicos(Pressão e Gaveta)</h3>
+                <ul>
+                    <li>Torneiras e Conexões</li>
+                    <li>Sifões, Vedações e Válvulas</li>
+                    <li>Kits de reparo de descarga</li>
+                    <li>Tubos e Conexões PVC</li>
+                </ul>
+            </div>
+
+            <div class="categoria-card">
+                <h3>⚡ Materiais Elétricos</h3>
+                <ul>
+                    <li>Tomadas e Interruptores</li>
+                    <li>Lâmpadas LED e Luminárias</li>
+                    <li>Chuveiros e Resistências</li>
+                </ul>
+            </div>
+
+            <div class="categoria-card">
+                <h3>🛠️ Ferramentas</h3>
+                <ul>
+                    <li>Chaves de fenda, Phillips e Teste</li>
+                    <li>Alicates universais e de corte</li>
+                    <li>Martelos, Trenas e Estiletes</li>
+                    <li>Kits de chaves variados</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- ENDEREÇO E HORÁRIO DE FUNCIONAMENTO -->
+        <div class="info-loja">
+            <p>📍 <strong>Endereço:</strong> Av. Santos Dumont, Lauro de Freitas (Próximo ao Banco Itaú, no Centro Comercial MM)</p>
+            <p>🕒 <strong>Horário de Funcionamento:</strong> Segunda a Sábado das 08h às 17h</p>
+        </div>
+
+        <!-- BOTÃO DE ATENDIMENTO -->
+        <div class="area-botao">
+            <p style="font-weight: 600; color: #4a5568;">Dúvidas sobre estoque ou preços?</p>
+            <!-- Substitua o número abaixo pelo WhatsApp real com DDD (ex: 5571999998888) -->
+            <a href="https://wa.me/5571993120361" class="btn-whatsapp" target="_blank">
+                💬 Consultar no WhatsApp
+            </a>
+        </div>
     </main>
 
 </body>
